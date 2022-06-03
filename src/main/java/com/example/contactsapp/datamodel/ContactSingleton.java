@@ -72,7 +72,6 @@ public class ContactSingleton {
                 String surname = contactPiece[1];
                 String phone = contactPiece[2];
                 String comment = contactPiece[3];
-                //Añadir comprobar telefono
 
                 Contact c = new Contact(name, surname, phone, comment);
                 contacts.add(c);

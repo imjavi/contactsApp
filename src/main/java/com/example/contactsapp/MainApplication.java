@@ -17,7 +17,7 @@ public class MainApplication extends Application {
 
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("main-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
-        scene.getStylesheets().add("style.css");
+         scene.getStylesheets().add("style.css");
         stage.getIcons().add(new Image("/app-icon.png"));
 
         stage.setResizable(true);

@@ -147,6 +147,8 @@ public class MainController {
             alert.setTitle("No contact");
             alert.setHeaderText("");
             alert.setContentText("No contact selected");
+            alert.getDialogPane().getStylesheets().add("style.css");
+            alert.getButtonTypes().set(0, okButton);
             alert.showAndWait();
             return;
         } else {
@@ -234,31 +236,31 @@ public class MainController {
         }
     }
 
-//    Double click
-//
-//    @FXML
-//    public void doubleLeftClick(MouseEvent mouseEvent) {
-//        if (mouseEvent.getButton().equals(MouseButton.PRIMARY)) {
-//            if(mouseEvent.getClickCount()==2){
-                    //code
-//            }
-//        }
-//    }
-
 
     public void eraseContact(Contact c){
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Erase a contact");
-        alert.setHeaderText("Delete a contact");
-        alert.setContentText("Are you sure?");
+        if(c == null){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("No contact");
+            alert.setHeaderText("");
+            alert.setContentText("No contact selected");
+            alert.getDialogPane().getStylesheets().add("style.css");
+            alert.getButtonTypes().set(0, okButton);
+            alert.showAndWait();
+            return;
+        } else {
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Erase a contact");
+            alert.setHeaderText("Delete a contact");
+            alert.setContentText("Are you sure?");
 
-        alert.getDialogPane().getStylesheets().add("style.css");
+            alert.getDialogPane().getStylesheets().add("style.css");
 
-        alert.getButtonTypes().set(0, yesButton);
-        alert.getButtonTypes().set(1, noButton);
-        Optional<ButtonType> response = alert.showAndWait();
-        if (response.isPresent() && response.get()==yesButton){
-            ContactSingleton.getInstance().deleteContact(c);
+            alert.getButtonTypes().set(0, yesButton);
+            alert.getButtonTypes().set(1, noButton);
+            Optional<ButtonType> response = alert.showAndWait();
+            if (response.isPresent() && response.get()==yesButton) {
+                ContactSingleton.getInstance().deleteContact(c);
+            }
         }
     }
 
@@ -303,8 +305,8 @@ public class MainController {
             if (c == null){
                 contactsTableView.getSelectionModel().selectFirst();
             }
-            filteredContactList.setPredicate(contact -> true);
-            contactsTableView.getSelectionModel().select(c);
+                filteredContactList.setPredicate(contact -> true);
+                contactsTableView.getSelectionModel().select(c);
         }
     }
 }
