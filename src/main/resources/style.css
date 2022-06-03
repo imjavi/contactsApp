@@ -1,0 +1,193 @@
+*{
+    -fx-primary-color: rgb(50,60,70);
+    -fx-secondary-color: rgb(70,80,90);
+    -fx-third-color: rgb(100,80,60);
+    -fx-focus-color: rgb(100,120,140);
+    -fx-focus-menu: rgb(0,155,210);
+}
+
+.label {
+    -fx-font-size: 11pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: white;
+    -fx-opacity: 0.8;
+}
+
+
+/*dialogpane related*/
+DialogPane {
+    -fx-background-color: -fx-primary-color;
+}
+
+
+.dialog-pane .label{
+    -fx-font-family: "Segoe UI";
+}
+
+.dialog-pane {
+    -fx-background-color: -fx-primary-color;
+}
+
+.dialog-pane:header .header-panel {
+  -fx-background-color: -fx-primary-color;
+
+}
+
+DialogPane .header-panel .text{
+    -fx-font-size: 16pt;
+}
+
+DialogPane .button-bar .container {
+  -fx-background-color: -fx-primary-color;
+}
+
+.dialog-pane > .button-bar {
+    -fx-font-size: 12pt;
+}
+
+/*tableview related*/
+.table-view {
+    -fx-base: -fx-focus-color;
+    -fx-control-inner-background: -fx-secondary-color;
+    -fx-background-color: -fx-primary-color;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    -fx-padding: 5;
+    -fx-text-fill: white;
+    -fx-font-family: "Segoe UI Light";
+    -fx-font-size: 12pt;
+
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+        -fx-text-fill: white;
+
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-size: 35;
+    -fx-border-width: 0 0 1 0;
+    -fx-background-color: transparent;
+    -fx-border-color:
+        transparent
+        transparent
+        white
+        transparent;
+    -fx-border-insets: 0 10 1 0;
+        -fx-text-fill: white;
+
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 20pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: white;
+    -fx-alignment: center-left;
+    -fx-opacity: 1;
+}
+
+
+.table-row-cell {
+    -fx-table-cell-border-color: -fx-secondary-color;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: -fx-focus-color;
+}
+.table-row-cell:selected:hover {
+    -fx-background-color: derive(-fx-focus-color, 50%);
+}
+.table-row-cell:selected {
+    -fx-background-color: derive(-fx-focus-color, 30%);
+}
+
+
+.table-row-cell:selected .text{
+    -fx-fill: white;
+}
+
+/*menu related*/
+.menu-bar {
+    -fx-background-color: -fx-primary-color;
+}
+
+.context-menu{
+    -fx-background-color: derive(-fx-secondary-color, 20%);
+}
+
+
+.menu-item:focused, .menu-bar .menu:hover {
+    -fx-background-color: -fx-focus-menu;
+}
+
+.menu-bar .label, .context-menu .label {
+    -fx-font-size: 14pt;
+    -fx-font-family: "Segoe UI";
+    -fx-text-fill: white;
+    -fx-opacity: 0.8;
+}
+
+MenuItem{
+    -fx-background-color: derive(-fx-secondary-color, 20%);
+}
+
+/*textfield related*/
+.text-field {
+    -fx-font-size: 10pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: white;
+    -fx-background-color: -fx-secondary-color;
+    -fx-padding: 9;
+}
+
+/*toolbar related*/
+ToolBar{
+    -fx-background-color: -fx-primary-color;
+}
+
+/*ToggleButton related*/
+ToggleButton {
+    -fx-background-color: -fx-secondary-color;
+    -fx-padding: 10;
+}
+
+ToggleButton:hover {
+    -fx-background-color:  derive(-fx-secondary-color, 30%)
+}
+
+ToggleButton:pressed, ToggleButton:default:hover:pressed, ToggleButton:selected {
+    -fx-background-color: derive(-fx-secondary-color, 50%);
+}
+
+ToggleButton:selected:hover{
+    -fx-background-color: derive(-fx-secondary-color, 80%);
+
+}
+
+/* Button related */
+.button {
+    -fx-background-color: -fx-secondary-color;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-padding: 10;
+    -fx-text-fill: white;
+}
+
+.button:hover {
+    -fx-background-color:  derive(-fx-secondary-color, 30%)
+}
+
+.button:pressed, .button:default:hover:pressed {
+    -fx-background-color: derive(-fx-secondary-color, 50%);
+}
+
+
+.button:disabled, .button:default:disabled {
+    -fx-background-color:  derive(-fx-secondary-color, 30%);
+    -fx-text-fill: white;
+}
+
+
+.button:default:hover {
+    -fx-background-color: derive(-fx-secondary-color, 30%);
+}
